@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Page Layout</title>
+    <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="main-container bg-light ">
+        <nav class="navbar navbar-expand-lg navbar-light position-sticky  shadow  mb-2 mt-3  rounded" style="height: 60px;">
+            <div class="container-fluid bg-body">
+                <a class="navbar-brand" href="#">
+                    <img src="data:image/jpeg;base64,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" alt="Logo" width="40" height="36" class="d-inline-block align-text-top rounded">
+                    Olivia <span>Miller</span>
+                </a>
+                
+                <div class="navbar-divider"></div>
+                    
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="input-group">
+                            <span class="input-group-text bg-white border-end-0" id="search-icon">
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <input type="text" class="form-control border-start-0" style="width: 400px;" placeholder="Search Dashboard" aria-label="Search" aria-describedby="search-icon">
+                        </div>
+                    </div>
+                </div>
+                
+    
+<div class="border d-flex align-items-center justify-content-between rounded" style="border-color: #ccc;">
+    <h6 class="mb-0 text-primary me-2 mx-4" style="width: 180px;">Switch Company</h6>
+
+    <div class="vr mx-2"></div>
+
+    <button class="btn btn-outline-none dropdown-toggle" type="button" id="searchDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        Oliver Miller
+    </button>
+</div>
+
+                    <div class="navbar-divider"></div>
+    
+                <ul class="navbar-nav nav-profile">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr-GCtKU34ACsZJaJbJv0hmqCjSLJrfsbIXA&usqp=CAU" alt="Profile" width="40" height="40" class="rounded me-2 ">
+                            Welcome back<span class="text-primary"> Jossi!</span>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    
+        <div class="container-fluid ">
+            <div class="menu-bar bg-body position-sticky shadow mb-2 mt-3 rounded" style="height: 60px;">
+                <nav class="navbar navbar-expand-lg d-flex align-items-center">
+                    <div class="dashboard bg-primary rounded d-flex justify-content-center align-items-center"
+                        style="height: 70px; width: 150px; margin-top: -12px; position: relative; font-size: large;">
+                        <i class="fa-solid fa-chart-area mb-1 mx-1" style="color: #63E6BE; font-size: 24px;"></i>
+                        <span class="fw-bold text-light mx-1">Dashboard</span>
+                    </div>
+            
+                    <ul class="navbar-nav d-flex flex-row justify-content-around w-100 p-0 mb-3" style="list-style-type: none;">
+                        <li class="nav-item mx-3 d-flex align-items-center">
+                            <div class="icon-wrapper">
+                                <i class="fa-regular fa-circle-down"></i>
+                            </div>
+                            Receivables
+                        </li>
+                        <li class="nav-item mx-3 d-flex align-items-center">
+                            <div class="icon-wrapper">
+                                <i class="fa-solid fa-share"></i>
+                            </div>
+                            Returns
+                        </li>
+                        <li class="nav-item mx-3 d-flex align-items-center">
+                            <div class="icon-wrapper">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            Customers
+                        </li>
+                        <li class="nav-item mx-3 d-flex align-items-center">
+                            <div class="icon-wrapper">
+                                <i class="fa-regular fa-handshake"></i>
+                            </div>
+                            Payable
+                        </li>
+                        <li class="nav-item mx-3 d-flex align-items-center">
+                            <div class="icon-wrapper">
+                                <i class="fa-solid fa-dollar-sign"></i>
+                            </div>
+                            Sales
+                        </li>
+                        <li class="nav-item mx-3 d-flex align-items-center">
+                            <div class="icon-wrapper">
+                                <i class="fa-solid fa-list"></i>
+                            </div>
+                            Inventory
+                        </li>
+                        <li class="nav-item mx-3 d-flex align-items-center">
+                            <div class="icon-wrapper">
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </div>
+                            Imports
+                        </li>
+                        <li class="nav-item mx-3 d-flex align-items-center">
+                            <div class="icon-wrapper">
+                                <i class="fa-solid fa-tag"></i>
+                            </div>
+                            Tickets
+                        </li>
+                        <li class="nav-item mx-3 d-flex align-items-center">
+                            <div class="icon-wrapper">
+                                <i class="fa-solid fa-up-right-and-down-left-from-center fa-flip-both"></i>
+                            </div>
+                            EDI
+                        </li>
+                        <li class="nav-item mx-3 d-flex align-items-center">
+                            <div class="icon-wrapper">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            Showroom
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            
+            <div class="row ">
+                <!-- Sidebar -->
+                <nav id="sidebarMenu" class="col-md-3  col-lg-2 d-md-block bg-light sidebar collapse shadow p-3 mb-5 bg-body rounded">
+                    <div class="position-sticky pt-3 shadow p-3  bg-body rounded">
+                        <ul class="nav ">
+                            <li class="nav-item">
+                                <a class="nav-link active fw-bold text-dark" aria-current="page" href="#">
+                                    <span data-feather="home"></span>
+                                    <i class="fa-solid fa-square-poll-vertical" style="color: #74C0FC;"></i>
+                                    Reports
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    Company snapshot
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    Open order report
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    Cut & sold lookup
+                                </a>
+                            </li>
+                            <li class="nav-item"></li>
+                                <a class="nav-link" href="#">
+                                    Inventory snapshot
+                                </a>
+                            </li>
+                            <li class="nav-item"></li>
+                                <a class="nav-link" href="#">
+                                    Balance to sell 
+                                </a>
+                            </li>
+                            <li class="nav-item"></li>
+                                <a class="nav-link" href="#">
+                                    Open orders 
+                                </a>
+                            </li>
+                            <li class="nav-item"></li>
+                                <a class="nav-link" href="#">
+                                    <span data-feather="shopping-cart"></span>
+                                    comparison report
+                                </a>
+                            </li>
+                            <li class="nav-item"></li>
+                                <a class="nav-link" href="#">
+                                    <span data-feather="shopping-cart"></span>
+                                    SR Availability
+                                </a>
+                            </li>
+                            <li class="nav-item"></li>
+                                <a class="nav-link" href="#">
+                                    <span data-feather="shopping-cart"></span>
+                                     forecast report
+                                </a>
+                            </li>
+                            <li class="nav-item"></li>
+                                <a class="nav-link" href="#">
+                                    <span data-feather="shopping-cart"></span>
+                                    Detailed comparison report
+                                </a>
+                            </li>
+                            <li class="nav-item"></li>
+                                <a class="nav-link" href="#">
+                                    <span data-feather="shopping-cart"></span>
+                                    Style cost report
+                                </a>
+                            </li>
+                            <li class="nav-item"></li>
+                                <a class="nav-link" href="#">
+                                    <span data-feather="shopping-cart"></span>
+                                 report(Sales persons)
+                                </a>
+                            </li>
+                            <li class="nav-item"></li>
+                                <a class="nav-link" href="#">
+                                    <span data-feather="shopping-cart"></span>
+                                Shipping/Receiving Log
+                                </a>
+                            </li>
+                            <li class="nav-item"></li>
+                            <a class="nav-link" href="#">
+                                <span data-feather="shopping-cart"></span>
+                            Receiving summary
+                            </a>
+                        </li>
+                        <li class="nav-item "></li>
+                        <a class="nav-link" href="#">
+                            <span data-feather="shopping-cart"></span>
+                        Shipping Report
+                        </a>
+                    </li>
+                            
+                        </ul>
+                    </div>
+                </nav>
+    
+                <!-- Main Content Area -->
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 text-bg-light p-2">
+
+                    <div class="container1 d-flex flex-row">
+                        <div class="sub-container d-flex flex-row position-sticky pt-3 mx-3 shadow p-3 mb-5 bg-body rounded">
+                            <div class="icons " style="background-color: #B197FC; opacity: 0.3; ">
+                                <i class="fa-solid fa-dollar-sign" style="color: #302355;"></i>                       
+                                 </div>
+                            <div class="heading">
+                                <h4>$32,350.00</h4>
+                            <p>Total Revenue</p>
+                            </div>
+                        </div>
+                        <div class="sub-container d-flex flex-row position-sticky pt-3 mx-3 shadow p-3 mb-5 bg-body rounded">
+                            <div class="icons" style="background-color: #e97ae5; opacity: 0.3">
+                                <i class="fa-brands fa-dropbox" style="color: #a7099f;"></i>                
+                                        </div>
+                            <div class="heading">
+                                <h4>$6000</h4>
+                            <p>Total Expenditure</p>
+                            </div>
+                        </div>
+                        <div class="sub-container d-flex flex-row position-sticky pt-3 mx-3 shadow p-3 mb-5 bg-body rounded">
+                            <div class="icons" style="background-color: #77dce9; opacity: 0.3">
+                                <i class="fa-solid fa-hand-holding-dollar" style="color: #077788;"></i>
+                            </div>
+                            <div class="heading">
+                                <h4>$56,034.00</h4>
+                            <p>Accounts Receivable</p>
+                            </div>
+                        </div>
+                        <div class="sub-container d-flex flex-row position-sticky pt-3 mx-3 shadow p-3 mb-5 bg-body rounded">
+                            <div class="icons" style="background-color: #e6bc63; opacity: 0.3">
+                                <i class="fa-solid fa-share-from-square" style="color: #a8760a;"></i>
+                            </div>
+                            <div class="heading">
+                                <h4>$67,083.00</h4>
+                            <p>Accounts Payable</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Second Row -->
+                    <div class="container2 d-flex flex-row">
+                        <div class="sub-container d-flex flex-row position-sticky pt-3 mx-3 shadow p-3 mb-5 bg-body rounded">
+                            <div class="icons" style="background-color: #b1ec32; opacity: 0.3">
+                                <i class="fa-solid fa-envelope-open-text" style="color: #3e5214;"></i>
+                            </div>
+                            <div class="heading">
+                                <h4>$3,478</h4>
+                            <p>Items missing images</p>
+                            </div>
+                        </div>
+                        <div class="sub-container d-flex flex-row position-sticky pt-3 mx-3 shadow p-3 mb-5 bg-body rounded">
+                            <div class="icons" style="background-color: #fb93a8; opacity: 0.3">
+                                <i class="fa-solid fa-comment-dollar" style="color: #f50635;"></i>
+                            </div>
+                            <div class="heading">
+                                <h4>$237</h4>
+                            <p>Items missing FOB Costs</p>
+                            </div>
+                        </div>
+                        <div class="sub-container d-flex flex-row position-sticky pt-3 mx-3 shadow p-3 mb-5 bg-body rounded">
+                            <div class="icons" style="background-color: #89bbe1; opacity: 0.3">
+                                <i class="fa-brands fa-slack" style="color: #0669b6;"></i>
+                            </div>
+                           <div class="heading">
+                            <h4>$160</h4>
+                            <p>PO items missing costs</p>
+                           </div>
+                        </div>
+                        <div class="sub-container d-flex flex-row position-sticky pt-3 mx-3 shadow p-3 mb-5 bg-body rounded">
+                            <div class="icons" style="background-color: #64e8a4; opacity: 0.3">
+                                <i class="fa-solid fa-book" style="color: #05b65a;"></i>
+                            </div>
+                            <div class="heading">
+                                <h4>0/$0.00</h4>
+                            <p>Booked</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Third Row (placeholder for image) -->
+                    <div class="container3 d-flex flex-row">
+                        <div class="sub-container mx-3 position-sticky pt-3 shadow p-3 mb-5 bg-body rounded">
+                            <img src="data:image/jpeg;base64,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" alt="graph" style="height:350px; width: 480px;">
+                        </div>
+                        <div class="sub-container mx-3 position-sticky pt-3 shadow p-3 mb-5 bg-body rounded">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1zgt2n99DmUOnxGmpROtMaJK1TdwLQhhfUw&usqp=CAU" alt="graph" style="height:350px; width: 480px;">
+                        </div>
+                        
+                    </div>
+                    <div class="sub-container1 mx-2 position-sticky pt-3 shadow p-3 mb-5 bg-body rounded">
+                        <i class="fa-solid fa-spinner mx-2 justify-content-center align-items-center" style="color: #74C0FC; "></i>
+                        <p>Loading more...</p>
+                    </div>
+                </main>
+            </div>
+        </div>
+    
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
